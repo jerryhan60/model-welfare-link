@@ -1,10 +1,14 @@
-# Study entry link
+# Companion study web interface
 
-Public static entry page for the companion study. It reads the current HTTPS
-destination from `route.json` on the `live` branch and preserves the visitor's
-invitation when redirecting. It contains no study records, API credentials,
-researcher keys, or invitation codes.
+The participant interface stays at the permanent GitHub Pages address. It reads
+the current API destination from `route.json` on the `live` branch. The Mac mini
+updates that branch after tunnel changes. Session tokens remain in tab-local
+sessionStorage on the stable Pages origin. Failed reads reconnect; actions are
+never automatically replayed. The server and study data remain on the Mac mini.
 
-The Mac mini updates the live branch when its free tunnel address changes.
-The fixed entry page does not need rebuilding for those updates. The Mac and
-tunnel must still be available; this is a stable entry link, not an uptime guarantee.
+Only public browser assets are stored here. No API credentials, researcher keys,
+invitation codes, or participant records are committed. The Mac must stay available;
+tunnel rotation can still cause a temporary connection pause.
+
+The source participant assets are maintained in the private model-welfare
+repository under companion-prototype/static and copied here for publication.
